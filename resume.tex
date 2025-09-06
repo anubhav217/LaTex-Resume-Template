@@ -1,0 +1,120 @@
+\documentclass[11pt]{article}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{newtxtext,newtxmath}
+  \newcommand{\headingfont}{\sffamily}
+\else
+  \usepackage{fontspec}
+  \setmainfont{TeX Gyre Termes}
+  \newfontfamily\headingfont{TeX Gyre Heros}
+\fi
+
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+
+\geometry{
+  left=1.2cm,
+  right=1.2cm,
+  top=1.2cm,
+  bottom=1.2cm,
+  columnsep=12pt
+}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{accent}{HTML}{2F6F9B}
+\definecolor{muted}{HTML}{666666}
+
+\newcommand{\sectitle}[1]{%
+  \vspace{4pt}\noindent\textbf{\large\headingfont\color{accent}#1}\vspace{4pt}\par
+  \vspace{3pt}\hrule\vspace{5pt}
+}
+
+\newcommand{\contactline}[2]{\noindent\textbf{#1:} #2\\}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{minipage}[t]{0.68\textwidth}
+  {\LARGE\bfseries Your Full Name}\\[4pt]
+  {\small Software Engineer \quad | \quad B.Tech Computer Science}\\
+  \vspace{6pt}
+  \small
+  \href{mailto:you@example.com}{you@example.com} \quad $\vert$ \quad +91 98xxxxxxx \quad $\vert$ \quad \href{https://github.com/yourusername}{github.com/yourusername}
+\end{minipage}
+\begin{minipage}[t]{0.30\textwidth}
+  \raggedleft
+  \vspace{-6pt}
+  {\small \textit{Location: City, Country}}\\
+  {\small \textit{LinkedIn: linkedin.com/in/you}}
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\begin{minipage}[t]{0.28\textwidth}
+  \sectitle{Skills}
+  \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item Programming: C, C++, Python, Java
+    \item Web: HTML, CSS, JavaScript, React
+    \item Tools: Git, Docker, Linux
+    \item Topics: Data Structures, Algorithms, OS, DBMS
+  \end{itemize}
+
+  \vspace{4pt}
+  \sectitle{Education}
+  \textbf{Your University} \hfill {\small 20XX -- 20XX}\\
+  B.Tech in Computer Science \\
+  CGPA: X.XX / 10.0
+
+  \vspace{6pt}
+  \sectitle{Achievements}
+  \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item GATE Topper / Scholarship — (example)
+    \item Hackathon Winner — (example)
+  \end{itemize}
+
+  \vspace{6pt}
+  \sectitle{Languages}
+  English (Fluent) \\
+  Hindi (Native)
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.70\textwidth}
+  \sectitle{Summary}
+  Motivated Computer Science undergraduate with hands-on experience in software development, algorithms and web applications. Interested in systems programming and scalable architectures.
+
+  \vspace{6pt}
+  \sectitle{Experience}
+  \textbf{Software Intern, Company Name} \hfill {\small Jun 20XX -- Aug 20XX}\\
+  \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item Brief bullet describing your responsibility or achievement.
+    \item Another bullet — include technologies used and impact.
+  \end{itemize}
+
+  \vspace{6pt}
+  \sectitle{Projects}
+  \textbf{LaTeX Resume Template} \hfill {\small Apr 2014 -- Present}\\
+  A one-page, two asymmetric column resume template in XeTeX that caters particularly to an undergraduate Computer Science student.
+  \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item Built with XeLaTeX, uses fontspec and tikz for polished output.
+    \item Includes modular sections for quick customization.
+  \end{itemize}
+
+  \vspace{6pt}
+  \sectitle{Open Source}
+  2200 stars, 600 forks, over 100k views across Overleaf, ShareLaTeX and LaTeXTemplates.
+
+  \vspace{6pt}
+  \sectitle{References}
+  Available upon request.
+\end{minipage}
+
+\end{document}
